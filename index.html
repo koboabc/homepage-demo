@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>张三 · 个人主页</title>
+<meta name="description" content="张三的个人主页 —— 研究方向、项目与联系方式。">
+<link rel="stylesheet" href="style.css">
+<!-- 站点图标：与头像同款的小圆脸 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23eaf3fd'/%3E%3Ccircle cx='16' cy='13' r='7' fill='none' stroke='%231f5fa8' stroke-width='2'/%3E%3Cpath d='M4 31c1.5-5 6-8 12-8s10.5 3 12 8' fill='none' stroke='%231f5fa8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">张三</a>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="主导航">
+      <a href="#about">简介</a>
+      <a href="#research">研究方向</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系方式</a>
+      <button class="theme-toggle" type="button" aria-label="切换深色 / 浅色主题" title="切换主题">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ Hero / 个人简介 ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+
+      <div class="hero-head">
+        <div class="hero-heading">
+          <p class="hero-eyebrow">云麓大学 · 经济学院</p>
+          <h1 class="hero-name">张三</h1>
+          <p class="hero-title">硕士研究生 / 研究方向：资产定价与量化投资</p>
+        </div>
+
+        <!-- 简笔画动画头像：外圈虚线缓慢旋转、整体轻微浮动、眼睛定时眨动 -->
+        <div class="hero-avatar">
+          <svg class="avatar" viewBox="0 0 120 120" role="img" aria-label="简笔画风格的个人头像">
+            <defs>
+              <clipPath id="avatarClip">
+                <circle cx="60" cy="60" r="52"/>
+              </clipPath>
+            </defs>
+
+            <circle class="avatar-ring" cx="60" cy="60" r="57"/>
+            <circle class="avatar-disc" cx="60" cy="60" r="52"/>
+
+            <g clip-path="url(#avatarClip)">
+              <g class="avatar-figure">
+                <!-- 长发：整块铺在最下层当背景，下缘沉到肩线以下，随后被衣身盖住 -->
+                <path class="hair" d="M30 98
+                                        C 24 90 21 79 24 69
+                                        C 27 59 29 50 34 43
+                                        C 38 32 47 24 57 24
+                                        C 68 24 80 31 86 43
+                                        C 90 50 93 59 96 69
+                                        C 99 79 96 90 90 98
+                                        C 84 92 72 88 60 88
+                                        C 48 88 36 92 30 98 Z"/>
+
+                <!-- 衣身：填充压住头发，轮廓即肩线 -->
+                <path class="torso" d="M20 114 C 26 96 42 88 60 88 C 78 88 94 96 100 114
+                                       L100 122 L20 122 Z"/>
+                <!-- 领口 -->
+                <path class="thin" d="M50 88 Q60 99 70 88"/>
+
+                <!-- 脸：只画露出来的那段弧（两颊 → 下颌），头顶那段轮廓交给头发 -->
+                <path d="M37.4 56 A 23 23 0 0 0 82.6 56"/>
+                <!-- 发际线：头发在额头上的边界 -->
+                <path d="M37.4 56 C 40 47 46 38 56 38 C 67 38 79 46 82.6 56"/>
+
+                <!-- 脖子 -->
+                <path d="M54 74 V88 M66 74 V88"/>
+
+                <!-- 棕色框架眼镜 -->
+                <circle class="glasses" cx="51" cy="56" r="7"/>
+                <circle class="glasses" cx="69" cy="56" r="7"/>
+                <path class="glasses" d="M58 55.5 h4"/>
+                <path class="glasses" d="M44 54 L39 52"/>
+                <path class="glasses" d="M76 54 L81 52"/>
+
+                <!-- 眼睛（眨眼动画） -->
+                <circle class="eye" cx="51" cy="56" r="2.5"/>
+                <circle class="eye" cx="69" cy="56" r="2.5"/>
+                <!-- 嘴 -->
+                <path class="thin" d="M54 67 Q60 72 66 67"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <p class="hero-bio">
+        我的兴趣集中在资产定价的实证检验与量化策略的构建。目前在做因子择时与组合风险预算方面的工作，
+        同时也关注行为金融与市场微观结构。如果你也在做相关方向，欢迎来信交流。
+      </p>
+
+      <ul class="hero-links">
+        <li><a href="mailto:your_email@example.com">邮箱</a></li>
+        <li><a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="#" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ============ 个人简介 ============ -->
+  <section class="section wrap" id="about">
+    <h2 class="section-title">个人简介</h2>
+    <div class="prose">
+      <p>
+        我本科主修金融学，现于云麓大学经济学院攻读硕士学位，师从某某教授。
+        本科期间曾在某某研究中心参与资产定价相关的实证研究，从此对“价格里到底
+        装了什么信息”这个问题一直放不下。
+      </p>
+      <p>
+        我的研究兴趣集中于<strong>资产定价的实证检验与量化投资</strong>：
+        因子收益究竟来自风险补偿还是定价偏误、交易成本约束下组合该如何构建，
+        以及极端行情中风险如何跨资产传导。除此之外，我也长期关注行为金融
+        与市场微观结构。
+      </p>
+      <p>
+        学术之外，我习惯用写作整理思路，也喜欢长跑和手冲咖啡。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 研究方向 ============ -->
+  <section class="section wrap" id="research">
+    <h2 class="section-title">研究方向</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>资产定价与因子模型</h3>
+        <p>检验动量、价值、质量等经典因子的定价效率，关注因子在不同市场状态下的失效与反转。</p>
+        <ul class="tags">
+          <li>因子模型</li>
+          <li>实证资产定价</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>量化投资与组合优化</h3>
+        <p>在交易成本与风险预算约束下构建组合，研究权重估计的稳健性与回撤控制方法。</p>
+        <ul class="tags">
+          <li>组合优化</li>
+          <li>策略回测</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>行为金融与市场异象</h3>
+        <p>考察投资者情绪与有限注意力如何造成价格偏离，以及异象在套利限制下的持续性。</p>
+        <ul class="tags">
+          <li>行为金融</li>
+          <li>情绪指标</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>波动率与风险建模</h3>
+        <p>比较已实现波动率与 GARCH 族模型对尾部风险的刻画能力，关注极端行情下的相关性结构。</p>
+        <ul class="tags">
+          <li>波动率建模</li>
+          <li>风险管理</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 项目列表 ============ -->
+  <section class="section wrap" id="projects">
+    <h2 class="section-title">项目</h2>
+    <ol class="project-list">
+
+      <li class="project">
+        <div class="project-meta"><span class="year">2026</span></div>
+        <div class="project-body">
+          <h3><a href="#" target="_blank" rel="noopener">因子择时：宏观状态下的动量与价值轮动</a></h3>
+          <p>用宏观状态变量动态调整因子暴露，在样本外做回测，重点考察换手率与交易成本对超额收益的侵蚀。</p>
+          <ul class="tags">
+            <li>因子择时</li>
+            <li>Python</li>
+            <li>回测</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project-meta"><span class="year">2025</span></div>
+        <div class="project-body">
+          <h3><a href="#" target="_blank" rel="noopener">新闻情绪与行业轮动</a></h3>
+          <p>基于财经新闻文本构建行业情绪指标，检验其对下期行业收益的预测能力与信号衰减速度。</p>
+          <ul class="tags">
+            <li>文本情绪</li>
+            <li>行业轮动</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project-meta"><span class="year">2024</span></div>
+        <div class="project-body">
+          <h3><a href="#" target="_blank" rel="noopener">风险平价组合对波动率估计的敏感性</a></h3>
+          <p>对比不同波动率估计方法对风险平价权重与组合回撤的影响，给出相对稳健的参数选择区间。</p>
+          <ul class="tags">
+            <li>风险平价</li>
+            <li>风险管理</li>
+          </ul>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ 联系方式 ============ -->
+  <section class="section wrap" id="contact">
+    <h2 class="section-title">联系方式</h2>
+    <div class="prose">
+      <p>欢迎通过邮件与我联系，讨论研究合作、开源项目或任何你觉得有趣的问题。</p>
+    </div>
+    <ul class="contact-list">
+      <li>
+        <span class="contact-label">邮箱</span>
+        <a href="mailto:your_email@example.com">your_email@example.com</a>
+      </li>
+      <li>
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">github.com/yourname</a>
+      </li>
+      <li>
+        <span class="contact-label">Google Scholar</span>
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">scholar.google.com</a>
+      </li>
+      <li>
+        <span class="contact-label">地址</span>
+        <span>云麓市学府路 1 号，云麓大学经济学院</span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="year">2026</span> 张三 · 保留所有权利</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
